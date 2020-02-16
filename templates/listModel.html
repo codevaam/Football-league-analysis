@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FootballApp-Leagues</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/teams.css">
+</head>
+
+<body>
+    <div class="icon-bar">
+        <a href="#" class="active"><i class="fa fa-home"></i></a>
+        <a class="header">Football app - {{ model }}</a>
+    </div>
+
+    <table class="table">
+        <tr>
+            {% for field in fields %}
+            <th>{{ field.name }}</th>
+            {% endfor %}
+        </tr>
+        {% for row in data %}
+        <tr>
+            {% for field in fields %}
+                {% if field.type == 'ID' %}
+                <td><a href="/{{field.model}}/{{row[field.name]}}">{{row[field.name]}}</a></td>
+                {% else %}
+                <td>{{row[field.name]}}</td>
+                {% endif %}
+            {% endfor %}
+        </tr>
+        {% endfor %}
+        <!-- <tr>
+            <td><a href='#'>Barcelona</a></td>
+            <td>BAR</td>
+            <td>Liga BBVA</td>
+        </tr>
+        <tr>
+            <td><a href='#'>Manchester United</a></td>
+            <td>MAN</td>
+            <td>Premire League</td>
+        </tr></a>
+        <tr>
+            <td><a href='#'>Chelsea</a></td>
+            <td>CHE</td>
+            <td>Premire League</td>
+        </tr>
+        <tr>
+            <td><a href='#'>Real Madrid</a></td>
+            <td>REA</td>
+            <td>Liga BBVA</td>
+        </tr>
+        <tr>
+            <td><a href='#'>Juventus</a></td>
+            <td>JUV</td>
+            <td>Some League</td>
+        </tr> -->
+    </table>
+</body>
+
+</html>

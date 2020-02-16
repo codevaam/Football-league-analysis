@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Football - seasons</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/details.css">
+        <link rel="stylesheet" href="/static/css/teams.css">
+    </head>
+    
+    <body>
+
+        <div class="icon-bar">
+            <a href="#" class="active"><i class="fa fa-home"></i></a>
+            <a class="header">Football app</a>
+        </div>
+
+        <div class="details">
+            <ol>
+                <li>{{team1.name}}:{{team2.name}} - {{fixture.team1Score}}:{{fixture.team2Score}}</li>
+                <li>FixtureID: {{fixture.fixtureID}}</li>
+                <li>SeasonID: {{fixture.seasonID}}</li>
+                <li>Date: {{fixture.date}}</li>
+            </ol>
+        </div>
+
+        <h2>Goals:</h2>
+        <table class="table">
+            <tr>
+                <th>Time (Minutes)</th>
+                <th>ScorerID</th>
+                <th>Scorer Name</th>
+                <th>Assister ID</th>
+                <th>Assist Name</th>
+                <th>Type</th>
+            </tr>
+            {% for goal in goals %}
+            <tr>
+                <td>{{goal.time/60}}</td>
+                <td><a href="/players/{{goal.playerID}}">{{goal.playerID}}</a></td>
+                <td>{{goal.playerName}}</td>
+                <td><a href="/players/{{goal.assistID}}">{{goal.assistID}}</a></td>
+                <td>{{goal.assistName}}</td>
+                <td>{{goal.goalType}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

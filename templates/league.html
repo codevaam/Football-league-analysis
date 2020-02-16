@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Football - league</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/details.css">
+        <link rel="stylesheet" href="/static/css/teams.css">
+    </head>
+
+    <body>
+        <div class="icon-bar">
+            <a href="#" class="active"><i class="fa fa-home"></i></a>
+            <a class="header">Football app</a>
+        </div>
+
+        <div class="details">
+            <ol>
+                <li>League Name: {{league.name}}</li>
+                <li>LeagueID: {{league.leagueID}}</li>
+                <li>League abbreviation: {{league.abbr}}</li>
+                <li>Level: {{league.level}}</li>
+            </ol>
+        </div>
+        <h2>Seasons: </h2>
+        <table class="table">
+                <tr>
+                    <th>SeasonID</th>
+                    <th>SeasonName</th>
+                </tr>
+            {% for season in seasons %}
+            <tr>
+                <td><a href='/seasons/{{season.seasonID}}'>{{season.seasonID}}</a></td>
+                <td>{{season.name}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

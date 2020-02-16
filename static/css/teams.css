@@ -1,0 +1,68 @@
+.icon-bar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+}
+
+.icon-bar a {
+    float: right;
+    width: 10%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+}
+
+.icon-bar .header{
+    float: left;
+    width: 20%;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 30px;
+}
+
+body {margin:0;}
+
+html{
+    background:rgba(211, 211, 211, 0.8);
+}
+
+
+table {
+    font-family: "Lato","sans-serif";
+    margin-left: 2%;
+    margin-top: 5%;
+}
+     
+table.one {                                  
+    margin-bottom: 3em; 
+    border-collapse:collapse;
+}   
+     
+td {                            
+    text-align: center;     
+    width: 17em;                    
+    padding: 1em;       
+}          
+    
+th {                              
+    text-align: center;                 
+    padding: 1em;
+    background-color: #e8503a;       
+    color: white;  
+}                 
+
+tr {    
+    height: 1em;    
+}
+    
+table tr:nth-child(even) {           
+    background-color: #eee;
+}
+     
+table tr:nth-child(odd) {           
+    background-color:#fff;      
+}
+    

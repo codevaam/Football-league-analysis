@@ -1,0 +1,83 @@
+.icon-bar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+}
+
+.icon-bar a {
+    float: right;
+    width: 10%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+}
+
+.icon-bar .header{
+    float: left;
+    width: 20%;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 40px;
+}
+
+
+.active {
+    background-color: #4CAF50;
+}
+  
+
+.list{
+  width: 600px;
+  margin-left: 2%;
+  margin-top: 6%;
+}
+   
+h2 {
+  font: 400 40px/1.5 Helvetica, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+   
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+   
+li {
+  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+  border-bottom: 1px solid #ccc;
+}
+   
+li:last-child {
+  border: none;
+}
+   
+li a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  width: 600px;
+  
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
+}
+   
+li a:hover {
+  font-size: 30px;
+  background: #f6f6f6;
+}
+
+
+body {margin:0;}
+
+
+html{
+    background:rgba(211, 211, 211, 0.8);
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Football - seasons</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/details.css">
+        <link rel="stylesheet" href="/static/css/teams.css">
+    </head>
+
+    <body>
+        <div class="icon-bar">
+            <a href="#" class="active"><i class="fa fa-home"></i></a>
+            <a class="header">Football app</a>
+        </div>
+
+        <div class="details">
+            <ol>
+                <li>Season Name: {{season.name}}</li>
+                <li>SeasonID: {{season.seasonID}}</li>
+                <li>League:<a href="/leagues/{{league.leagueID}}"> {{league.name}}</a></li>
+            </ol>
+        </div>
+        <h2>Teams: </h2>
+        <table class="table">
+                <tr>
+                    <th>TeamID</th>
+                    <th>TeamName</th>
+                </tr>
+            {% for team in teams %}
+            <tr>
+                <td><a href='/teams/{{team.teamID}}'>{{team.teamID}}</a></td>
+                <td>{{team.name}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <h2>Fixtures:</h2>
+        <table class="table">
+            <tr>
+                <th>FixtureID</th>
+                <th>Date</th>
+                <th>Team1</th>
+                <th>Team2</th>
+                <th>Score</th>
+            </tr>
+            {% for fixture in fixtures %}
+            <tr>
+                <td><a href="/fixtures/{{fixture.fixtureID}}">{{fixture.fixtureID}}</a></td>
+                <td>{{fixture.date}}</td>
+                <td>{{fixture.team1Name}}</td>
+                <td>{{fixture.team2Name}}</td>
+                <td>{{fixture.team1Score}} - {{fixture.team2Score}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

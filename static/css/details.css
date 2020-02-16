@@ -1,0 +1,37 @@
+
+.details div {
+  width: 500px;
+  margin: 10px
+}
+ 
+.details ol {
+  color: black;
+  list-style-type: none;
+}
+ 
+.details ol li {
+  position: relative;
+  font: 16px/1.5 Helvetica, Verdana, sans-serif;
+  margin-bottom: 10px;
+}
+ 
+.details li p {
+  font: 12px/1.5 Helvetica, sans-serif;
+  padding-left: 60px;
+  color: #555;
+}
+
+.heading{
+    margin-left: 7%;
+    font: 20px bold;
+}
+
+.details span {
+  position: absolute;
+}
+
+h2{
+    margin-left:2% ; 
+    margin-top: 2%;
+    font-family: sans-serif;   
+}
